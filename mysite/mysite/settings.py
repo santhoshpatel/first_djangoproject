@@ -25,7 +25,7 @@ SECRET_KEY = '8hc57b2sqz-2*kubku@qx=f2%i-+uv-bub-_^y7i*%*uhbwyt#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'notes'
+    'notes',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,14 +115,4 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
-
-STATIC_URL = '/static/'
-#print "base dir path", BASE_DIR
-#print os.path.join(os.path.dirname(BASE_DIR), "mysite", "static",  "templates")
- 
-TEMPTEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(BASE_DIR), "mysite", "static",  "templates"),
-    #'/home/frankbox/python/djangoapp/mysite/static/templates',
-)
+STATIC_URL = 'static/'
